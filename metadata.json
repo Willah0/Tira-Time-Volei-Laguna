@@ -1,0 +1,5 @@
+{
+  "name": "Vôlei do Laguna - Time da outra ",
+  "description": "Um aplicativo completo para gerenciar jogadores, presença, fila e formação de times em dias de jogo de vôlei. Inclui balanceamento inteligente de equipes, histórico de partidas e estatísticas de jogadores, com todos os dados salvos localmente no seu navegador.",
+  "requestFramePermissions": []
+}

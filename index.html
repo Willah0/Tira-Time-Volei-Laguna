@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vôlei Rotação Pro</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#FFC107" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-accent: 37 99 235;
+        --color-accent-dark: 29 78 216;
+        --color-dark-bg: 15 23 42;
+        --color-dark-card: 30 41 59;
+        --color-light-bg: 241 245 249;
+        --color-light-card: 255 255 255;
+        --color-text-dark: 226 232 240;
+        --color-text-light: 30 41 59;
+        --color-text-secondary-dark: 148 163 184;
+        --color-text-secondary-light: 100 116 139;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'sport-accent': 'rgb(var(--color-accent) / <alpha-value>)',
+              'sport-accent-dark': 'rgb(var(--color-accent-dark) / <alpha-value>)',
+              'dark-bg': 'rgb(var(--color-dark-bg))',
+              'dark-card': 'rgb(var(--color-dark-card))',
+              'light-bg': 'rgb(var(--color-light-bg))',
+              'light-card': 'rgb(var(--color-light-card))',
+              'text-dark': 'rgb(var(--color-text-dark))',
+              'text-light': 'rgb(var(--color-text-light))',
+              'text-secondary-dark': 'rgb(var(--color-text-secondary-dark))',
+              'text-secondary-light': 'rgb(var(--color-text-secondary-light))',
+              'sport-win': '#16A34A',
+              'sport-loss': '#DC2626',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-light-bg dark:bg-dark-bg text-text-light dark:text-text-dark font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('SW registered: ', registration);
+          }).catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
